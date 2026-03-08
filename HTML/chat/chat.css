@@ -1,0 +1,51 @@
+/* Estilos globales */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
+
+/* ANIMACIONES */
+@keyframes fadeInSlideUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-entrance { animation: fadeInSlideUp 3s cubic-bezier(0.22, 2, 0.36, 1.5) forwards; }
+.delay-entrance { animation-delay: 0.5s; }
+
+/* ESTRUCTURA PRINCIPAL (ChatPage) */
+.chatContainer {
+  min-height: 100vh;
+  /* Nota: asegúrate de tener la imagen en la carpeta */
+  background: #111; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+.chatContainerWrapper { display: flex; gap: 30px; width: 100%; max-width: 1400px; height: 700px; }
+.panel { background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50px; padding: 40px; display: flex; flex-direction: column; }
+.sidebarPanel { width: 350px; align-items: center; text-align: center; gap: 20px; }
+.chatPanel { flex: 1; }
+.mainChat { display: flex; flex-direction: column; height: 100%; }
+.chatTitle { font-style: italic; font-size: 35px; color: #C7C7C7; text-align: center; margin-bottom: 30px; }
+.messagesArea { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 20px; margin-bottom: 20px; }
+
+/* SIDEBAR Y COMPONENTES */
+.avatarPlaceholder { width: 150px; height: 150px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; border: 2px solid rgba(255, 255, 255, 0.2); margin-bottom: 10px; }
+.name { font-size: 28px; font-weight: 600; color: #fff; }
+.box { width: 100%; background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 15px; border: 1px solid rgba(255, 255, 255, 0.1); margin-top: 10px; }
+.label { font-size: 12px; color: #aaa; text-transform: uppercase; }
+.value { font-size: 16px; font-weight: 500; color: #fff; display: block; margin-top: 5px;}
+.stats { display: flex; gap: 20px; font-size: 14px; color: #ccc; margin-top: 20px; }
+
+/* INPUT Y BURBUJAS (ChatInput y ChatMessage) */
+.inputArea { background: rgba(108, 108, 108, 0.15); border-radius: 50px; padding: 15px 25px; display: flex; align-items: center; }
+.inputField { background: transparent; border: none; color: #CACACA; font-size: 15px; width: 100%; outline: none; }
+.sendButton { background: transparent; border: none; cursor: pointer; color: #BABABA; font-size: 20px; }
+.bubble { background: rgba(108, 108, 108, 0.2); padding: 15px 25px; border-radius: 25px; max-width: 70%; color: #E0E0E0; }
+.julia { align-self: flex-start; }
+.user { align-self: flex-end; background: rgba(59, 130, 246, 0.2); }
+
+/* Estilos para el Markdown renderizado */
+.bubble b { color: #fff; font-weight: bold; } /* Resaltar negritas */
+.bubble i { color: #aaa; font-style: italic; } /* Cursivas (tips/sarcasmo) */
+.bubble ul, .bubble ol { margin-left: 20px; margin-top: 10px; margin-bottom: 10px; }
+.bubble li { margin-bottom: 5px; }

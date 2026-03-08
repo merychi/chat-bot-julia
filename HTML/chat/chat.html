@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Julia</title>
+    <link rel="stylesheet" href="chat.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="chatContainer">
+        <div class="chatContainerWrapper">
+            
+            <div class="panel sidebarPanel animate-entrance">
+                <div class="avatarPlaceholder"></div>
+                <h2 class="name">Julia</h2>
+                <div class="box"><p class="label">Emoción</p><span class="value">Concentrada</span></div>
+                <div class="box"><p class="label">Pensando</p><span class="value">Analizando la variante Najdorf...</span></div>
+                <div class="box"><p class="label">Nivel de Usuario</p><span class="value">Intermedio</span></div>
+                <div class="stats">
+                    <div>Winrate: <b>68%</b></div>
+                    <div>Partidas: <b>124</b></div>
+                </div>
+            </div>
+
+            <div class="panel chatPanel animate-entrance delay-entrance">
+                <div class="mainChat">
+                    <h1 class="chatTitle">Tema del Chat</h1>
+                    
+                    <div id="messagesArea" class="messagesArea">
+                    </div>
+
+                    <div class="inputArea">
+                        <input type="text" id="userInput" placeholder="Escribe un mensaje..." class="inputField">
+                        <button id="sendButton" class="sendButton">
+                            ➤
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
