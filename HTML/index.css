@@ -4,7 +4,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background-color: #000; font-family: 'Inter', sans-serif; }
 
-.homeContainer { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; background: url('/fondo-home.jpg') no-repeat center center fixed; background-size: cover; }
+.homeContainer { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; background: url('assets/fondo-home.jpg') no-repeat center center fixed; background-size: cover; }
 .glassPanel { background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 50px; padding: 40px 60px; display: flex; align-items: center; gap: 40px; max-width: 1350px; height: 730px; }
 
 /* Sección Imagen */
