@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +8,51 @@
     <link rel="stylesheet" href="chat.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <div class="chatContainer">
         <div class="chatContainerWrapper">
-            
+
             <div class="panel sidebarPanel animate-entrance">
-                <div class="avatarPlaceholder"></div>
+                <div class="avatarPlaceholder">
+                    <img src="../assets/perfil-julia.png" alt="Julia - Instructora de Ajedrez">
+                </div>
                 <h2 class="name">Julia</h2>
-                <div class="box"><p class="label">Emoción</p><span class="value">Concentrada</span></div>
-                <div class="box"><p class="label">Pensando</p><span class="value">Analizando la variante Najdorf...</span></div>
-                <div class="box"><p class="label">Nivel de Usuario</p><span class="value">Intermedio</span></div>
-                <div class="stats">
-                    <div>Winrate: <b>68%</b></div>
-                    <div>Partidas: <b>124</b></div>
+                <div class="box">
+                    <p class="label">¿Cuáles son las Piezas en el Ajedrez?</p><span class="value">El Peón, la Torre, los
+                        Alfileres, el Caballo, el Rey y la Reina</span>
                 </div>
-            </div>
-
-            <div class="panel chatPanel animate-entrance delay-entrance">
-                <div class="mainChat">
-                    <h1 class="chatTitle">Tema del Chat</h1>
-                    
-                    <div id="messagesArea" class="messagesArea">
-                    </div>
-
-                    <div class="inputArea">
-                        <input type="text" id="userInput" placeholder="Escribe un mensaje..." class="inputField">
-                        <button id="sendButton" class="sendButton">
-                            ➤
-                        </button>
-                    </div>
+                <div class="box">
+                    <p class="label">Si realmente quieres aprender a jugar, puedes completar tus conocimientos aquí:</p>
+                    <span class="value">https://www.chess.com/es/ como-jugar-ajedrez</span>
                 </div>
-            </div>
-
         </div>
+
+        <div class="panel chatPanel animate-entrance delay-entrance">
+            <div class="mainChat">
+                <h1 class="chatTitle">Aprendiendo a Jugar Ajedrez</h1>
+
+                <div id="messagesArea" class="messagesArea">
+                </div>
+
+                <div id="typingIndicator" class="typing-indicator" style="display: none;">
+                    <span></span><span></span><span></span>
+                </div>
+
+                <div class="inputArea">
+                    <input type="text" id="userInput" placeholder="Escribe un mensaje..." class="inputField">
+                    <button id="sendButton" class="sendButton">
+                        ➤
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="chat.js"></script>
 </body>
+
 </html>
